@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/bernat/Desktop/Labs/ОАиП/lab1/task1/task1"
+relocations:     []
+...
