@@ -1,14 +1,7 @@
 ### macOS
-# Finder metadata
 .DS_Store
-
-# Thumbnails
 ._*
-
-# Custom folder icons
-Icon
-
-# Volume root files
+Icon
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -16,3 +9,27 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+### IDE и редакторы
+.vscode/
+.vs/
+*.sln
+*.vcxproj*
+.idea/
+
+### macOS / Clang артефакты отладки
+*.dSYM/
+
+### Скомпилированные файлы и временный мусор
+*.o
+*.obj
+*.exe
+*.out
+bin/
+build/
+
+### Игнорировать скомпилированные бинарники внутри папок task*, не трогая сами папки
+**/task[0-9]*/task[0-9]*
+!**/task[0-9]*/task[0-9]*.cpp
+!**/task[0-9]*/task[0-9]*.h
+!**/task[0-9]*/task[0-9]*.hpp
