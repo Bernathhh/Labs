@@ -17,5 +17,6 @@ Labs/
 │   └── lab1/
 ├── ВТиВИн/
 │   └── lab1/
+│   └── lab2/
 ├── .gitignore
 └── README.md
