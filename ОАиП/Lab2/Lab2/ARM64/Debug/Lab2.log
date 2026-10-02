@@ -1,0 +1,4 @@
+﻿  Lab2.cpp
+\\mac\Home\Desktop\Labs\ОАиП\Lab2\Lab2.cpp(83,107): warning C4566: character represented by universal-character-name '\u043D' cannot be represented in the current code page (1252)
+\\mac\Home\Desktop\Labs\ОАиП\Lab2\Lab2.cpp(83,125): warning C4566: character represented by universal-character-name '\u041D' cannot be represented in the current code page (1252)
+  Lab2.vcxproj -> \\Mac\Home\Desktop\Labs\ОАиП\Lab2\ARM64\Debug\Lab2.exe

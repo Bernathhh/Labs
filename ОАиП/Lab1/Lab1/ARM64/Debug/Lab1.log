@@ -1,0 +1,4 @@
+﻿  Lab1.cpp
+\\psf\Home\Desktop\Labs\ОАиП\Lab1\Lab1.cpp(55,107): warning C4566: character represented by universal-character-name '\u043D' cannot be represented in the current code page (1252)
+\\psf\Home\Desktop\Labs\ОАиП\Lab1\Lab1.cpp(55,125): warning C4566: character represented by universal-character-name '\u041D' cannot be represented in the current code page (1252)
+  Lab1.vcxproj -> \\psf\Home\Desktop\Labs\ОАиП\Lab1\ARM64\Debug\Lab1.exe
