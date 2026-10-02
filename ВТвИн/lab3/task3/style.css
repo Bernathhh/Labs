@@ -1,0 +1,44 @@
+/* сброс дефолтных отступов браузера */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* растягивание на весь экран */
+html, body {
+    height: 100%;
+}
+
+/* верхняя шапка */
+.header {
+    height: 20%;
+    border: 1px solid black;
+}
+
+/* левая колонка */
+.sidebar {
+    float: left;
+    width: 30%;
+    height: 60%;
+    border: 1px solid black;
+    border-top: none; /* без двойной линии */
+}
+
+/* основной блок справа */
+.content {
+    float: left;
+    width: 70%;
+    height: 60%;
+    border: 1px solid black;
+    border-top: none;  /* стык с шапкой */
+    border-left: none; /* стык с сайдбаром */
+}
+
+/* подвал */
+.footer {
+    clear: both; /* сброс обтекания колонок */
+    height: 20%;
+    border: 1px solid black;
+    border-top: none; /* стык с центральными блоками */
+}

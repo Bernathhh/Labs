@@ -1,0 +1,161 @@
+/* сброс стандартных отступов браузера */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* базовый фон страницы */
+body {
+    background-color: #dcdcdc;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* селектор #wrapper */
+#wrapper {
+    width: 96%;
+    margin: 10px auto;
+    background-color: #fff;
+    border: 1px solid #7092a7;
+}
+
+/* селектор #header */
+#header {
+    background-color: #008080;
+}
+
+/* селектор #nav */
+#nav ul {
+    list-style: none;
+}
+
+/* пункты меню горизонтально */
+#nav li {
+    display: inline-block;
+}
+
+/* селектор активного пункта навигации */
+#nav li.active a {
+    background-color: #4a4a4a;
+}
+
+/* ссылки меню в шапке */
+#nav a {
+    display: inline-block;
+    padding: 8px 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+/* селектор #main */
+#main {
+    padding: 15px;
+    overflow: hidden; /* удерживает внутри себя float колонки */
+}
+
+/* селектор #col-left: левая колонка на float */
+#col-left {
+    float: left;
+    width: 22%;
+    padding-right: 15px;
+    border-right: 1px solid #ddd;
+}
+
+/* селектор #col-right: правая колонка на float */
+#col-right {
+    float: right;
+    width: 22%;
+    padding-left: 15px;
+    border-left: 1px solid #ddd;
+}
+
+/* селектор #col-center: центральная колонка встает между левой и правой */
+#col-center {
+    margin-left: 23%;
+    margin-right: 23%;
+    padding: 0 15px;
+}
+
+/* оформление заголовков */
+h1 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 10px 0 6px 0;
+}
+
+/* текст внутри колонок с красной строкой и выравниванием по ширине */
+#main p {
+    font-size: 12px;
+    line-height: 1.35;
+    text-align: justify;
+    text-indent: 14px;
+    margin-bottom: 8px;
+}
+
+/* картинки под ширину своей колонки */
+img {
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+}
+
+/* селектор #cards: блок нижних 4 карточек со сбросом флоатов */
+#cards {
+    clear: both; /* сбрас верхних колонок */
+    border-top: 5px solid #008080;
+    padding: 15px 12px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+/* селекторы карточек внизу: 4 колонки в ряд */
+#card1, #card2, #card3, #card4 {
+    float: left;
+    width: 23.5%;
+    margin-right: 2%;
+    padding: 12px 10px;
+    background-color: #fff;
+    border: 1px solid #b3d1db;
+    text-align: center;
+}
+
+/* селектор #card4: крайняя правая карточка без margin-right */
+#card4 {
+    margin-right: 0;
+}
+
+#cards h2 {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+#cards p {
+    font-size: 11px;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+/* селектор #footer: подвал сайта */
+#footer {
+    clear: both;
+    background-color: #008080;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}

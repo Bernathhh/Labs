@@ -1,0 +1,45 @@
+/* сброс отступов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* цвет фона страницы */
+body {
+    background-color: #f8f8f8;
+    padding-top: 50px;
+}
+
+/* белый контейнер формы 320px */
+.register-form {
+    width: 320px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #fff;
+}
+
+/* инпуты и границы */
+.register-form input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 0 10px; /* отступ текста от рамки */
+    outline: none; /* убирать стандартную обводку браузера при фокусе */
+}
+
+/* зеленая кнопка сабмита */
+.register-form button {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: #1cbc11;
+    color: #fff;
+    cursor: pointer; /* иконка руки при наведении */
+}
+
+/* цвет кнопки при наведении */
+.register-form button:hover {
+    background-color: #14a20a;
+}

@@ -1,0 +1,31 @@
+/* базовый шрифт и цвет для всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5; /* межстрочный отступ, чтобы текст не слипался */
+}
+
+/* красный большой заголовок */
+.title {
+    font-size: 40px;
+    color: #f03333;
+    line-height: 1.2;
+    text-transform: uppercase; /* капс */
+}
+
+/* зеленый подзаголовок с линией */
+.subtitle {
+    font-size: 30px;
+    color: #12ac11;
+    line-height: 1.2;
+    text-decoration: underline; /* подчеркивание снизу */
+}
+
+/* список внизу */
+.list {
+    font-size: 20px;
+    color: #444;
+    font-style: italic;
+    list-style-type: square; /* квадратные точки */
+}

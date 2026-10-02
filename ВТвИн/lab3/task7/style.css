@@ -1,0 +1,51 @@
+/* сброс отступов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* полоса меню*/
+.menu {
+    width: 446px;
+    margin: 0 auto; /* центрирование блока по середине экрана */
+    list-style: none; 
+    background-color: #444;
+    height: 38px;
+}
+
+/* пункты меню идут слева направо */
+.menu-item {
+    float: left;
+    list-style: none;
+}
+
+/* оформление текста ссылок */
+.menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff; 
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* скрытое подменю */
+.submenu {
+    display: none; /* по умолчанию спрятано */
+    list-style: none;
+    background-color: #333;
+}
+
+/* показ подменю */
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.menu-item:hover {
+    background-color: #333;
+}

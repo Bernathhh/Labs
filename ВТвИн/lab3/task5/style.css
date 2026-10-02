@@ -1,0 +1,36 @@
+/* сброс отступов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* выравнивание кнопок по центру */
+nav {
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* квадратные кнопки павигации 40х40 */
+nav a {
+    display: inline-block; /* управление свойствами элемента высота ширина и тд, сохраняя расположение */
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* центрирование цифры по высоте */
+    text-align: center; /* центрирование по ширине */
+    background-color: #ddd;
+    color: #333;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+/* цвет при наведении */
+nav a:hover {
+    background-color: #ccc;
+}
+
+/* активная вкладка */
+nav a.active {
+    background-color: #d10953;
+    color: #fff;
+}

@@ -1,0 +1,35 @@
+/* сброс отступов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 50px; /* отступ под шапку */
+}
+
+/* шапка */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px; /* текст ровно по центру */
+    background-color: #929ec4;
+    color: #fff;
+    text-align: center;
+}
+
+/* блок с текстом */
+.content-box {
+    width: 800px;
+    margin: 0 auto; /* центрирование текста */
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.content-box p {
+    margin-bottom: 12px;
+    text-align: justify;
+}

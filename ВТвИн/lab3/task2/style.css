@@ -1,0 +1,30 @@
+/* сама таблица */
+.table {
+    border-collapse: collapse; /* объединение двух рамок ячейки в одну общую */
+    width: 500px;
+}
+
+/* рамки и отступы */
+.table td, .table th {
+    border: 1px solid #ccc;
+    padding: 5px 10px; /* отступ 5px сверху/снизу, 10px по бокам */
+}
+
+/* шапка таблицы */
+.table thead {
+    background-color: #f0f1f4;
+}
+
+/* нижняя строка с итогом */
+.table tfoot {
+    background-color: #121212;
+    color: #fff;
+    text-align: right;
+}
+
+/* подпись над таблицей */
+.table caption {
+    text-align: left;
+    font-style: italic; 
+    color: #888;
+}

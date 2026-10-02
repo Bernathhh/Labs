@@ -1,0 +1,82 @@
+/* сброс отступов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 40px;
+    background-color: #eee;
+}
+
+/* контейнер 600х400 с фоном и относительным позиционированием */
+.box {
+    position: relative; /* точка отсчета координат для всех картинок */
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    background: url("img/bg.jpg") no-repeat center / cover; /* фон по центру */
+    overflow: hidden; /* обрезание выступающих элементов */
+}
+
+/* общее правило: все элементы позиционируются абсолютно */
+.box img {
+    position: absolute;
+}
+
+/* полосатая бирюзовая планета на заднем плане */
+.p1 {
+    top: 50px;
+    left: 215px;
+    width: 95px;
+    z-index: 1;
+}
+
+/* голубая планета слева */
+.p2 {
+    top: 75px;
+    left: 125px;
+    width: 140px;
+    z-index: 2;
+}
+
+/* ракета: выше голубой планеты, но под бежевой */
+.ship {
+    top: 155px;
+    left: 185px;
+    width: 40px;
+    z-index: 3;
+}
+
+/* большая бежевая планета перекрывает ракету и край голубой планеты */
+.p3 {
+    top: 150px;
+    left: 185px;
+    width: 200px;
+    z-index: 4;
+}
+
+/* коричневый астероид справа */
+.ast {
+    top: 130px;
+    right: 170px;
+    width: 55px;
+    z-index: 2;
+}
+
+/* летающая тарелка поверх края большой планеты */
+.ufo {
+    bottom: 75px;
+    left: 170px;
+    width: 65px;
+    z-index: 5;
+}
+
+/* супермен в нижнем правом углу */
+.man {
+    bottom: 0;
+    right: 95px;
+    width: 55px;
+    z-index: 5;
+}

@@ -1,0 +1,49 @@
+/* сброс отступов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* список без маркеров */
+.breadcrumbs {
+    list-style: none;
+}
+
+/* пункты цепочки в одну строку */
+.breadcrumbs li {
+    display: inline-block; /* делает строчно-блочным элементом */
+}
+
+/* ссылки */
+.breadcrumbs a {
+    color: #0b56ea;
+    text-decoration: none;
+}
+
+/* подчеркивание при наведении мыши */
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* цвет текста текущей страницы */
+.breadcrumbs span {
+    color: #333;
+}
+
+/* стрелочка-разделитель после каждого пункта */
+.breadcrumbs li::after { /* псевдоэлемент, который автоматически добавляет разделитель после каждого пункта списка: */
+    content: ">";
+    margin: 0 8px; /* отступы по бокам от стрелки */
+    color: #777;
+}
+
+/* у последнего элемента списка убирать стрелку */
+.breadcrumbs li:last-child::after { /* псевдоэлемент, который автоматически добавляет разделитель после каждого пункта списка: */
+    content: "";
+}
