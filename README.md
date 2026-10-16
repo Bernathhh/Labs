@@ -23,5 +23,7 @@ Labs/
 │   └── lab2/
 │   └── lab3/
 │   └── lab4/
+├── ОсИТ/
+│   └── lab1/
 ├── .gitignore
 └── README.md
