@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.container {
+    display: grid; /* Grid-контейнер */
+    grid-template-columns: repeat(2, auto); /* задаёт структуру колонок */
+    gap: 15px 30px; /* отступы между ячейками */
+    padding: 15px;
+    border: 1px solid #4a90e2;
+    width: fit-content;
+}
+
+.card p {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.images {
+    display: flex;
+    gap: 8px; /* Отступ между оригиналом и картинкой с фильтром */
+}
+
+.images img {
+    width: 260px;
+    height: auto;
+    border: 1px solid #777777;
+    display: block;
+}
+
+/* Перевод изображения в черно-белый спектр */
+.f-grayscale {
+    filter: grayscale(100%);
+}
+
+/* Эффект старой фотографии */
+.f-sepia {
+    filter: sepia(100%);
+}
+
+/* Изменение насыщенности цветов */
+.f-saturate {
+    filter: saturate(30%);
+}
+
+/* Поворот оттенков цветов на цветовом круге в градусах */
+.f-hue {
+    filter: hue-rotate(90deg);
+}
+
+/* Инвертирование всех цветов изображения */
+.f-invert {
+    filter: invert(100%);
+}
+
+/* Изменение контрастности изображения */
+.f-contrast {
+    filter: contrast(40%);
+}

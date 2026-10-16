@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.canvas {
+  position: relative; /* Относительное позиционирование для псевдоэлемента */
+  width: 320px;
+  height: 320px;
+  background-color: #c9d8df;
+  border-radius: 50%;   /* Скругление блока */
+  overflow: hidden;  /* Обрезка всех выходящих за границы элементов */
+}
+
+/* --- ОБЛАКА И АНИМАЦИЯ --- */
+.clouds {
+  position: absolute; /* Позволяет позиционировать псевдоэлемент относительно родителя */
+  top: 60px;
+  left: 0;
+  width: 100%;
+  animation: moveClouds 8s linear infinite; 
+}
+
+.cloud {
+  position: relative; /* Относительное позиционирование для псевдоэлемента */
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.cloud::before {
+  content: '';
+  position: absolute; /* Позволяет позиционировать псевдоэлемент относительно родителя */
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.cloud-top {
+  width: 45px;
+  height: 12px;
+  margin-left: 150px;
+  margin-bottom: 12px;
+}
+.cloud-top::before {
+  width: 18px;
+  height: 18px;
+  top: -8px;
+  left: 12px;
+}
+
+.cloud-bottom {
+  width: 55px;
+  height: 14px;
+  margin-left: 110px;
+}
+.cloud-bottom::before {
+  width: 22px;
+  height: 22px;
+  top: -10px;
+  left: 15px;
+}
+
+/* Ключевые кадры анимации перемещения по оси X */
+@keyframes moveClouds {
+  from {
+    transform: translateX(-180px);
+  }
+  to {
+    transform: translateX(330px);
+  }
+}
+
+/* --- ЗДАНИЯ --- */
+.city {
+  position: absolute; /* Позволяет позиционировать псевдоэлемент относительно родителя */
+  bottom: 75px;
+  left: 65px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tower {
+  position: relative; /* Относительное позиционирование для псевдоэлемента */
+  width: 42px;
+  height: 90px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+/* Треугольная крыша башни */
+.tower::before {
+  content: '';
+  position: absolute; /* Позволяет позиционировать псевдоэлемент относительно родителя */
+  top: -24px;
+  left: -4px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 24px solid #cb5d43;
+}
+
+.tower::after {
+  content: '';
+  position: absolute; /* Позволяет позиционировать псевдоэлемент относительно родителя */
+  top: 14px;
+  left: 13px;
+  width: 16px;
+  height: 18px;
+  background-color: #55626b;
+}
+
+.house {
+  position: relative; /* Относительное позиционирование для псевдоэлемента */
+  width: 130px;
+  height: 64px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.house::before {
+  content: '';
+  position: absolute; /* Позволяет позиционировать псевдоэлемент относительно родителя */
+  top: -22px;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background-color: #cb5d43;
+}
+
+.house::after {
+  content: '';
+  position: absolute; /* Позволяет позиционировать псевдоэлемент относительно родителя */
+  top: 16px;
+  left: 16px;
+  width: 15px;
+  height: 20px;
+  background-color: #55626b;
+  
+  /* Дублирование окон с помощью множественных теней */
+  box-shadow: 24px 0 0 #55626b, 48px 0 0 #55626b, 72px 0 0 #55626b;
+}

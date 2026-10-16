@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 320px;
+    padding: 25px 20px;
+    border: 1px solid #4a90e2;
+}
+
+p {
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+p:last-child {
+    margin-bottom: 10px;
+}
+
+/* Синяя волнистая линия снизу */
+.text-1 {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: blue;
+}
+
+/* Розовая точечная линия снизу */
+.text-2 {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: pink;
+}
+
+/* Зеленая пунктирная линия снизу */
+.text-3 {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: green;
+}
+
+/* Красная двойная линия снизу */
+.text-4 {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-color: red;
+}

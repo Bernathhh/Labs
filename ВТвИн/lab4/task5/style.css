@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+h3 {
+    margin: 30px 0 12px;
+    font-size: 18px;
+}
+
+.frame {
+    display: inline-block;    /* подгоняет ширину рамки точно под содержимое */
+    border: 2px solid #4a90e2;
+    padding: 10px;
+    margin-bottom: 35px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+/* ================= LINEAR GRADIENT ================= */
+.frame-1 .box {
+    border: 1px solid #aaa;
+}
+
+.lg-1 {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(to bottom, #f5d020, #fff7c2);     /* Линейный градиент сверху вниз */
+}
+
+.lg-2 {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(to right, #f5d020, #fff7c2);    /* Линейный градиент слева направо */
+}
+
+.lg-3 {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(45deg, #fff7c2, #f5d020);     /* Линейный диагональный градиент под углом 45 градусов */
+}
+
+.lg-4 {
+    width: 245px;
+    height: 140px;
+    background: linear-gradient(to bottom,      /* Резкие переходы цветов с помощью совпадения процентных точек */
+        red 0%, red 33.3%, 
+        white 33.3%, white 66.6%, 
+        red 66.6%, red 100%);
+}
+
+.lg-5 {
+    width: 245px;
+    height: 140px;
+    background: linear-gradient(to right, #b0003a, #1100aa 40%, #88aaff 70%, #ffffff 90%, #d80027 100%);     /* Многоцветный линейный спектральный градиент */
+}
+
+/* ================= RADIAL GRADIENT ================= */
+.frame-2 .box {
+    border: 1px solid #ccc;
+}
+
+.rg-1 {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #5be1ff, #0077b6);     /* Круговой радиальный градиент из центра */
+}
+
+.rg-2 {
+    width: 330px;
+    height: 180px;
+    background: radial-gradient(ellipse, #5be1ff, #0077b6);     /* Эллиптический радиальный градиент */
+}
+
+.rg-3 {
+    width: 270px;
+    height: 160px;
+    background: radial-gradient(circle at 18% 25%, #62e5ff, #007bb5 25%, #007bb5 100%);   /* Радиальный градиент со смещением центра в верхний левый угол */
+}
+
+.rg-4 {
+    width: 240px;
+    height: 160px;
+    background: radial-gradient(circle at center,     /* Концентрический многоцветный радиальный градиент (мишень) */
+        #222 0%, #222 18%, 
+        #888 20%, 
+        #fff 32%, #fff 42%, 
+        green 44%, green 100%);
+}
+
+/* ================= REPEATING GRADIENTS ================= */
+.frame-3 {
+    width: 420px;
+}
+
+.rep-1 {
+    height: 90px;
+    margin-bottom: 10px;
+    background: repeating-linear-gradient(to bottom,     /* Повторяющийся линейный градиент (горизонтальная полоска/зебра) */
+        #111 0px, #111 3px, 
+        #fff 3px, #fff 7px);
+}
+
+.rep-2 {
+    height: 35px;
+    margin-bottom: 10px;
+    border: 1px solid #ff4d4d;
+    background: repeating-linear-gradient(45deg,     /* Повторяющийся диагональный градиент под 45 градусов */
+        #d8232a 0px, #d8232a 4px, 
+        #fff 4px, #fff 8px);
+}
+
+.rep-3 {
+    height: 440px;
+    background: repeating-radial-gradient(circle at center,     /* Повторяющийся радиальный градиент (кольца) */
+        #000 0px, #000 4px, 
+        #fff 4px, #fff 8px);
+}

@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.container {
+    display: inline-flex; /* рамку точно по размеру кнопок */
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
+    border: 1px solid #4a90e2;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 16px;         
+    
+    /* Относительные единицы em: отступы, скругления и тени пропорционально зависят от размера шрифта */
+    padding: 0.6em 1.2em;      
+    border-radius: 0.5em;    /* закругление кнопки */   
+    
+    border: 1px solid #bbb;
+    background-color: hsl(0, 0%, 80%);
+    color: #333;
+    text-decoration: none;   
+    cursor: pointer;
+    line-height: 1.2;
+    vertical-align: middle;
+    
+    box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.25);
+}
+
+.btn-sm {
+    font-size: 11px;
+}
+
+.btn-xl {
+    font-size: 24px;
+}

@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* Элементы выстраиваются в ряд */
+  flex-wrap: wrap; /* Элементы переносятся на новую строку, если не помещаются в текущую */
+  justify-content: space-between; /* Элементы распределяются с равными промежутками между ними */
+  align-content: flex-start; /* Элементы выравниваются по верхнему краю контейнера */
+
+  max-width: 640px;
+  width: 100%;
+  gap: 10px;
+}
+
+.box {
+  background-color: blue;
+  color: #fff;
+  padding: 8px;
+  font-size: 14px;
+  height: 250px;
+
+  flex: 0 1 23%; /* Манипуляция с размером блока */
+  min-width: 110px;
+}
+
+/* манипуляция с размером блока при уменьшении экрана */
+@media (max-width: 600px) {
+  .box {
+    flex: 0 1 48%;
+    height: 160px;
+  }
+}

@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.grid-container {
+    display: grid;
+    
+    /* minmax задает минимальный и максимальный размер колонок/строк, fr — доля свободного пространства */
+    grid-template-columns: minmax(40px, 1fr) minmax(40px, 1fr);
+    grid-template-rows: minmax(60px, auto) minmax(60px, auto) minmax(60px, auto);
+    
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #4a90e2;
+    width: 600px;
+    max-width: 100%;
+}
+
+.grid-item {
+    background-color: #f2f4f8;
+    border: 1px solid #999999;
+    padding: 8px;
+    font-size: 13px;
+    line-height: 1.3;
+}

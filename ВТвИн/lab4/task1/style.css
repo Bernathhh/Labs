@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.container {
+    /* inline-block подгоняет ширину внешней рамки точно под ширину блоков */
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #4a90e2;
+}
+
+.box {
+    width: 250px;
+    height: 90px;
+    margin-bottom: 25px;
+    padding: 4px;
+    border: 1px solid #888888;
+
+    /* обязательное свойство для работы resize добавляет полосы прокрутки, только если контент не помещается в блок.*/
+    overflow: auto;
+}
+
+.box:last-child {
+    margin-bottom: 0;
+}
+
+/* Двунаправленное растягивание: регулирует и высоту, и ширину */
+.box-both {
+    resize: both;
+}
+
+/* Запрет изменения размера */
+.box-none {
+    resize: none;
+}
+
+/* Однонаправленное растягивание: меняет только ширину блока */
+.box-horizontal {
+    resize: horizontal;
+}
+
+/* Однонаправленное растягивание: меняет только высоту блока */
+.box-vertical {
+    resize: vertical;
+}

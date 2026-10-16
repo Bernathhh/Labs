@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+/* Контейнер растягивается по ширине окна браузера */
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.text-columns {
+    columns: 3;      /* Разбиение текста на 3 колонки */
+    column-gap: 25px;    /* Отступ между колонками */ 
+    text-align: justify;
+    font-size: 13px;
+    line-height: 1.4;
+}

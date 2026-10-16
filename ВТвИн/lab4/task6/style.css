@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.container {
+    width: 280px;
+    padding: 15px 12px;
+    border: 1px solid #4a90e2;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.shadow-1 {
+    color: #000;
+    text-shadow: 3px 14px 0 #9e9e9e;     /* Базовая тень текста: сдвиг по X, сдвиг по Y, радиус размытия и цвет */
+    margin-bottom: 30px;
+}
+
+.shadow-2 {
+    color: #000;
+    text-shadow: 3px 14px 3px #888;     /* Тень с размытием */
+    margin-bottom: 30px;
+}
+
+.shadow-3 {
+    color: #000;
+    text-shadow: -3px -3px 2px blue, 3px 3px 2px red;     /* Несколько теней для одного текста через запятую */
+}
+
+.shadow-4 {
+    color: #a8a892;
+    text-shadow: 0 -1px 1px #666, 0 1px 1px #fff;     /* Эффект вдавленного текста за счет темной тени сверху и светлой снизу */
+}
+
+.shadow-5 {
+    color: #a8a892;
+    text-shadow: 1px 1px 0 #777, 2px 2px 0 #888, 3px 3px 0 #999;   /* Эффект объемного текста с помощью смещенных теней */
+}
+
+.shadow-6 {
+    color: #fff;
+    text-shadow:     /* Эффект контура вокруг букв с помощью четырех теней во все стороны */
+        1px 0 0 #777, 
+       -1px 0 0 #777, 
+        0 1px 0 #777, 
+        0 -1px 0 #777;
+    margin-bottom: 5px;
+}
