@@ -10,21 +10,13 @@ Icon
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 
-### IDE и редакторы
+### IDE, настройки и редакторы
 .vscode/
 .vs/
 *.sln
 *.vcxproj*
 .idea/
-
-### Visual Studio / MSBuild артефакты сборки
-[Dd]ebug/
-[Rr]elease/
-[Xx]64/
-[Xx]86/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-
+CppProperties.json
 
 ### macOS / Clang артефакты отладки
 *.dSYM/
@@ -36,6 +28,14 @@ Icon
 *.out
 bin/
 build/
+
+### Visual Studio / MSBuild каталоги сборки (для всех уровней вложенности)
+**/[Dd]ebug/
+**/[Rr]elease/
+**/[Xx]64/
+**/[Xx]86/
+**/[Aa][Rr][Mm]/
+**/[Aa][Rr][Mm]64/
 
 ### Игнорировать скомпилированные бинарники внутри папок task*, не трогая сами папки
 **/task[0-9]*/task[0-9]*
