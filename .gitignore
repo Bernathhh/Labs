@@ -17,6 +17,15 @@ Icon
 *.vcxproj*
 .idea/
 
+### Visual Studio / MSBuild артефакты сборки
+[Dd]ebug/
+[Rr]elease/
+[Xx]64/
+[Xx]86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+
 ### macOS / Clang артефакты отладки
 *.dSYM/
 
