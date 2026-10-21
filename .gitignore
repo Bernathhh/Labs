@@ -16,6 +16,9 @@ Icon
 *.sln
 *.vcxproj*
 .idea/
+CppProperties.json
+ARM64/
+lab1/ARM64/
 
 ### macOS / Clang артефакты отладки
 *.dSYM/
