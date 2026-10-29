@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    // Статический одномерный массив
+    // 1. Статический одномерный массив
     const int MAX_SIZE = 100;
     int a[MAX_SIZE];
 
@@ -18,7 +18,7 @@ int main() {
     srand((unsigned)time(0));
 
     do {
-        // Выбор размера массива n
+        // 2. Выбор размера массива n[cite: 1]
         cout << "\nChoose mode for array size n:\n";
         cout << "1 - Default (n = 10)\n";
         cout << "2 - Enter manually\n";
@@ -29,14 +29,20 @@ int main() {
 
         if (choice_n == '2') {
             cout << "Enter array size n (1.." << MAX_SIZE << "): ";
-            cin >> n;
-            if (n <= 0 || n > MAX_SIZE) n = 10;
+
+            // >>>>>>>>>>>>>>>>> ДОБАВЛЕННЫЙ БЛОК: ЗАЩИТА ВВОДА РАЗМЕРА N >>>>>>>>>>>>>>>>>
+            while (!(cin >> n) || n <= 0 || n > MAX_SIZE) {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid size! Enter integer n (1.." << MAX_SIZE << "): ";
+            }
+            // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         }
         else {
             n = 10;
         }
 
-        // Выбор способа заполнения
+        // 3. Выбор способа заполнения[cite: 1]
         cout << "\nChoose fill mode:\n";
         cout << "1 - Random numbers (default)\n";
         cout << "2 - Enter manually\n";
@@ -48,11 +54,18 @@ int main() {
         if (mode == '2') {
             cout << "Enter " << n << " elements: ";
             for (i = 0; i < n; i++) {
-                cin >> a[i];
+
+                // >>>>>>>>>>>>>>>>> ДОБАВЛЕННЫЙ БЛОК: ЗАЩИТА ОТ ВВОДА БУКВ В МАССИВ >>>>>>>>>>>>>>>>>
+                while (!(cin >> a[i])) {
+                    cin.clear();             // Сброс флага ошибки потока ввода
+                    cin.ignore(1000, '\n');  // Очистка некорректных символов (букв) из буфера
+                    cout << "Letters detected! Enter an integer for a[" << i << "]: ";
+                }
+                // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             }
         }
         else {
-            // Выбор диапазона для случайных чисел
+            // Выбор диапазона для генератора[cite: 1]
             cout << "Choose range for random numbers:\n";
             cout << "1 - Default (-100..100)\n";
             cout << "2 - Enter manually\n";
@@ -63,7 +76,15 @@ int main() {
 
             if (choice_range == '2') {
                 cout << "Enter min and max values (e.g. -20 20): ";
-                cin >> min_val >> max_val;
+
+                // >>>>>>>>>>>>>>>>> ДОБАВЛЕННЫЙ БЛОК: ЗАЩИТА ВВОДА ДИАПАЗОНА >>>>>>>>>>>>>>>>>
+                while (!(cin >> min_val >> max_val)) {
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    cout << "Invalid range! Enter two integers: ";
+                }
+                // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
                 if (min_val > max_val) {
                     temp = min_val;
                     min_val = max_val;
@@ -80,14 +101,14 @@ int main() {
             }
         }
 
-        // Вывод массива
+        // 4. Вывод массива
         cout << "\nArray: [ ";
         for (i = 0; i < n; i++) {
             cout << a[i] << " ";
         }
         cout << "]\n\n";
 
-        // Поиск индекса первого положительного элемента
+        // 5. Поиск индекса первого положительного элемента
         first = -1;
         for (i = 0; i < n; i++) {
             if (a[i] > 0) {
@@ -105,7 +126,7 @@ int main() {
             }
         }
 
-        // Проверка условий задачи
+        // 6. Проверка условий задачи[cite: 1]
         if (first == -1) {
             cout << "Result: No positive elements found. Sum cannot be calculated.\n";
         }
@@ -130,6 +151,7 @@ int main() {
             cout << "\nSum of elements between: " << sum << "\n";
         }
 
+        // 7. Повтор программы (Enter, 1, y/Y, н/Н)
         cout << "\nDo you want to continue? [y/n]: ";
         repeat = _getch();
         cout << "\n";
