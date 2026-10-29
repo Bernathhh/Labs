@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab5Task10</title>
+</head>
+<body>
+    <script>
+        // 1. Запрашиваем у пользователя сумму зарплаты
+        let salary = Number(prompt("Введите сумму зарплаты"));
+
+        let result = salary;
+
+        // 2. Добавка в виде премии 15% от зарплаты
+        result += salary * 0.15;
+        alert("Премия 15 %, на руки " + result);
+
+        // 3. Налоги 10% от суммы всех начислений (зарплата + премия)
+        result -= result * 0.10;
+
+        // 4. Трата в магазине на сумму 90 рублей
+        result -= 90;
+
+        // 5. Разделение оставшейся суммы пополам (пользователю и жене/мужу)
+        result /= 2;
+
+        alert("Жене половину отдал. Осталось: " + result);
+    </script>
+</body>
+</html>

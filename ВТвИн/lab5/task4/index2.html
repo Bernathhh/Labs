@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab5Task4.2</title>
+</head>
+<body>
+    <script>
+        let lang = 'by'; // 'ru' или 'by'
+        let week;
+
+        switch (lang) {
+            case 'ru':
+                week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+                break;
+            case 'by':
+                week = ['Панядзелак', 'Аўторак', 'Серада', 'Чацвер', 'Пятніца', 'Субота', 'Нядзеля'];
+                break;
+            default:
+                alert("Неверное значение языка.");
+                break;
+        }
+
+        alert(week);
+    </script>
+</body>
+</html>

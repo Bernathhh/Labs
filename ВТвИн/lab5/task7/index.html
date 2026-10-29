@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab5Task7</title>
+</head>
+<body>
+    <script>
+        // 1. Возвращает true, если два числа равны, иначе false
+        function areEqual(a, b) {
+            return a === b;
+        }
+
+        // 2. Возвращает true, если сумма двух чисел больше 10, иначе false
+        function isSumGreaterThanTen(a, b) {
+            return (a + b) > 10;
+        }
+
+        // 3. Возвращает true, если число отрицательное, иначе false
+        function isNegative(num) {
+            return num < 0;
+        }
+
+        // Проверка работы функций
+        alert("1. Числа 5 и 5 равны? " + areEqual(5, 5));             // true
+        alert("1. Числа 5 и 8 равны? " + areEqual(5, 8));             // false
+
+        alert("2. Сумма 6 и 7 больше 10? " + isSumGreaterThanTen(6, 7)); // true (13 > 10)
+        alert("2. Сумма 2 и 3 больше 10? " + isSumGreaterThanTen(2, 3)); // false (5 > 10)
+
+        alert("3. Число -4 отрицательное? " + isNegative(-4));        // true
+        alert("3. Число 12 отрицательное? " + isNegative(12));        // false
+    </script>
+</body>
+</html>

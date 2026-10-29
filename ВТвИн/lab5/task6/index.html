@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab5Task6</title>
+</head>
+<body>
+    <script>
+        // 1. Возвращает квадрат числа
+        function square(num) {
+            return num * num;
+        }
+
+        // 2. Возвращает сумму двух чисел
+        function sum(a, b) {
+            return a + b;
+        }
+
+        // 3. Вычитает от первого числа второе и делит на третье
+        function calc(a, b, c) {
+            return (a - b) / c;
+        }
+
+        // 4. Принимает число от 1 до 7, возвращает день недели на русском языке
+        function getDayOfWeek(day) {
+            let days = [
+                'Понедельник',
+                'Вторник',
+                'Среда',
+                'Четверг',
+                'Пятница',
+                'Суббота',
+                'Воскресенье'
+            ];
+            return days[day - 1];
+        }
+
+        // Проверка работы функций
+        alert("1. Квадрат числа 5: " + square(5));
+        alert("2. Сумма 10 и 15: " + sum(10, 15));
+        alert("3. (25 - 5) / 4: " + calc(25, 5, 4));
+        alert("4. День недели под номером 3: " + getDayOfWeek(3));
+    </script>
+</body>
+</html>
