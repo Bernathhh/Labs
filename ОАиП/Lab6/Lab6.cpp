@@ -14,7 +14,7 @@ int main() {
     srand((unsigned)time(0));
 
     do {
-        // 1. Выбор размеров матрицы N x M (динамический двумерный массив)
+        // Выбор размеров матрицы N x M (динамический двумерный массив)
         cout << "\nChoose mode for matrix size N x M:\n";
         cout << "1 - Default (3 x 4)\n";
         cout << "2 - Enter manually\n";
@@ -44,7 +44,7 @@ int main() {
             a[i] = new int[M];
         }
 
-        // 2. Выбор способа заполнения
+        // Выбор способа заполнения
         cout << "\nChoose fill mode:\n";
         cout << "1 - Random numbers (default)\n";
         cout << "2 - Enter manually\n";
@@ -64,7 +64,7 @@ int main() {
         else {
             // Выбор диапазона для случайных чисел
             cout << "Choose range for random numbers:\n";
-            cout << "1 - Default (-100..100)\n";
+            cout << "1 - Default (-20..20)\n";
             cout << "2 - Enter manually\n";
             cout << "Choice [1/2] (default is 1): ";
 
@@ -81,8 +81,8 @@ int main() {
                 }
             }
             else {
-                min_val = -100;
-                max_val = 100;
+                min_val = -20;
+                max_val = 20;
             }
 
             for (i = 0; i < N; i++) {
@@ -92,7 +92,7 @@ int main() {
             }
         }
 
-        // 3. Вывод сформированной матрицы
+        // Вывод матрицы
         cout << "\nMatrix (" << N << "x" << M << "):\n";
         for (i = 0; i < N; i++) {
             for (j = 0; j < M; j++) {
@@ -102,7 +102,7 @@ int main() {
         }
         cout << "\n";
 
-        // 4. Поиск "особых" элементов по столбцам
+        // Поиск "особых" элементов по столбцам
         int special_count = 0;
         cout << "Analyzing columns...\n";
 
@@ -132,7 +132,7 @@ int main() {
             }
         }
 
-        // 5. Вывод общего результата
+        // Вывод общего результата
         cout << "\n==================================================\n";
         cout << "Total number of special elements: " << special_count << "\n";
         cout << "==================================================\n";
@@ -145,7 +145,6 @@ int main() {
         // Освобождение массива указателей
         delete[] a;
 
-        // 6. Повтор программы (Enter, 1, y/Y, н/Н)
         cout << "\nDo you want to continue? [y/n]: ";
         repeat = _getch();
         cout << "\n";
