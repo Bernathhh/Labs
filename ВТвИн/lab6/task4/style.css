@@ -1,0 +1,12 @@
+.row {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 140px;
+    padding: 3px;
+}
+
+button {
+    padding: 4px 12px;
+}

@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(120deg, #b8b8e6, #a3c2f7);
+    font-family: sans-serif;
+}
+
+/* Контейнер яхты, который затем уплывает вправо */
+.container {
+    position: absolute;
+    top: 220px;
+    left: 60px;
+    width: 240px;
+    height: 85px;
+    transition: transform 2.2s ease-in;
+}
+
+/* Кнопка -> корпус яхты */
+.btn {
+    position: relative;
+    z-index: 3;
+    width: 240px;
+    height: 85px;
+    background-color: #625ec4;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-radius 0.5s ease;
+}
+
+/* Состояние корпуса яхты после клика */
+.btn.boat-hull {
+    border-radius: 6px 6px 85px 85px;
+}
+
+/* Мачта (изначально скрыта за кнопкой и наклонена) */
+.mast {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 122px;
+    width: 8px;
+    height: 135px;
+    background-color: #625ec4;
+    border-radius: 4px;
+    transform-origin: bottom center;
+    transform: translateY(80px) rotate(-35deg);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+}
+
+/* Поднятая мачта */
+.mast.raised {
+    transform: translateY(-60px) rotate(0deg);
+    opacity: 1;
+}
+
+/* Левый треугольный парус (сделан через CSS border) */
+.sail-left {
+    position: absolute;
+    z-index: 1;
+    bottom: 85px;
+    left: 42px;
+    width: 0;
+    height: 0;
+    border-bottom: 115px solid #ffffff;
+    border-left: 76px solid transparent;
+    transform-origin: bottom right;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+/* Правый треугольный парус */
+.sail-right {
+    position: absolute;
+    z-index: 1;
+    bottom: 85px;
+    left: 134px;
+    width: 0;
+    height: 0;
+    border-bottom: 115px solid #ffffff;
+    border-right: 68px solid transparent;
+    transform-origin: bottom left;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+/* Раскрытые паруса */
+.sail-left.open,
+.sail-right.open {
+    transform: scale(1);
+}
+
+/* Анимация отплытия за правую границу экрана */
+.container.sail-away {
+    transform: translateX(120vw);
+}

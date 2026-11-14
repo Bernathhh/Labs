@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.space {
+    position: relative;
+    width: 700px;
+    height: 450px;
+    margin: 20px auto;
+    background: url('img/bg.jpg') no-repeat center / cover;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+/* Расположение планет */
+.planet-1 {
+    position: absolute;
+    width: 140px;
+    top: 35px;
+    left: 290px;
+    z-index: 1;
+}
+
+.planet-2 {
+    position: absolute;
+    width: 185px;
+    top: 90px;
+    left: 145px;
+    z-index: 2;
+}
+
+.planet-3 {
+    position: absolute;
+    width: 310px;
+    top: 200px;
+    left: 215px;
+    z-index: 3;
+}
+
+/* Общие стили для элементов карусели */
+.carousel-item {
+    position: absolute;
+    width: 65px;
+    z-index: 4;
+    transition: all 0.4s ease;
+}
+
+/* Три фиксированные позиции карусели на синей планете */
+.pos-1 {
+    top: 175px;
+    left: 150px;
+}
+
+.pos-2 {
+    top: 145px;
+    left: 205px;
+}
+
+.pos-3 {
+    top: 165px;
+    left: 265px;
+}
+
+/* Кнопка "Полетели" */
+#startBtn {
+    position: absolute;
+    top: 265px;
+    left: 245px;
+    z-index: 5;
+    width: 135px;
+    height: 36px;
+    background-color: #edd5c5;
+    color: #9e473a;
+    font-size: 14px;
+    border: 1px solid #5c3a2e;
+    border-radius: 12px;
+    box-shadow: 2px 3px 0px #2b1a14;
+    cursor: pointer;
+}
+
+#startBtn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 2px 0px #2b1a14;
+}
